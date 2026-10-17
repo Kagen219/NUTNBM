@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027 國立臺南大學經營與管理學系｜高階經理人前瞻論壇暨招生說明會</title>
+    
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入 FontAwesome 圖示 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- 引入 AOS 滑動動畫 CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',      
+                            light: '#e6f0fa',     
+                            accent: '#00a8ff',    
+                            gold: '#d4af37',      
+                            dark: '#1a2b4c'       
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* 全站基底設定：背景統一，呈現一體感 */
+        body { 
+            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif; 
+            background: linear-gradient(135deg, #f8fbff 0%, #eef5fc 100%);
+            overflow-x: hidden;
+        }
+        
+        /* 頂部英雄區塊的自然過渡漸層 */
+        .hero-bg {
+            background: linear-gradient(135deg, #0056b3 0%, #0084ff 100%);
+            position: relative;
+            /* 使用曲線切割，讓區塊融合更柔和 */
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+            padding-bottom: 8rem;
+        }
+        
+        /* 毛玻璃與柔和陰影設定，取代生硬邊框 */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.05);
+        }
+
+        .logo-blend { mix-blend-mode: multiply; }
+        
+        /* 導覽列滑動時的變化 */
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-brand-blue selection:text-white relative">
+
+    <!-- 背景裝飾圓暈（增加一體化的空間感） -->
+    <div class="fixed top-1/4 -left-64 w-96 h-96 bg-brand-light rounded-full mix-blend-multiply filter blur-3xl opacity-70 -z-10 pointer-events-none"></div>
+    <div class="fixed bottom-1/4 -right-64 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-70 -z-10 pointer-events-none"></div>
+
+    <!-- Navbar (一開始透明，滑動後變白) -->
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-transparent py-2" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-3">
+                    <img src="image_14a2bb.jpg" alt="NUTN BM Logo" class="h-12 logo-blend bg-white/50 rounded-lg p-1">
+                    <div class="hidden sm:block border-l-2 border-white/50 pl-3 transition-colors duration-300" id="nav-text">
+                        <div class="font-bold text-lg leading-tight tracking-wide drop-shadow-sm">國立臺南大學</div>
+                        <div class="text-xs opacity-90 drop-shadow-sm">經營與管理學系 碩士在職專班</div>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm font-bold tracking-wider hover:text-brand-accent transition-colors duration-300 drop-shadow-sm nav-link">設立宗旨</a>
+                    <a href="#features" class="text-sm font-bold tracking-wider hover:text-brand-accent transition-colors duration-300 drop-shadow-sm nav-link">系所特色</a>
+                    <a href="#agenda" class="text-sm font-bold tracking-wider hover:text-brand-accent transition-colors duration-300 drop-shadow-sm nav-link">說明會時程</a>
+                    <a href="#register" class="bg-white/20 backdrop-blur-sm border border-white/30 px-6 py-2 rounded-full font-bold hover:bg-white hover:text-brand-blue transition-all shadow-lg nav-btn">
+                        立即報名
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-36 pb-20 lg:pt-48 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-white/20 text-white backdrop-blur-sm border border-white/30 text-sm font-medium mb-8 tracking-widest shadow-inner">
+                2027 碩士在職專班 招生啟動
+            </span>
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight tracking-tight drop-shadow-lg">
+                當產業變局成為常態<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-yellow-100">你的下一個決策在哪裡？</span>
+            </h1>
+            <p class="text-lg md:text-xl text-blue-50 mb-12 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-sm opacity-90">
+                培育具「經營管理、創新思維及國際視野」之專業人才。<br class="hidden md:block">
+                打破傳統框架，強調學術理論與實務應用並重，打造具備「移動力」與「執行力」的高階經理人。
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6" data-aos="fade-up" data-aos-delay="300">
+                <a href="#register" class="bg-white text-brand-blue px-10 py-4 rounded-full font-bold text-lg hover:bg-brand-light hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] flex items-center justify-center gap-3 group">
+                    預約招生說明會席位
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section (移除背景色，融入一體) -->
+    <section id="about" class="py-24 relative -mt-20 z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-brand-blue tracking-widest uppercase mb-3">Core Values</h2>
+                <h3 class="text-3xl lg:text-4xl font-extrabold text-brand-dark">教育目標與設立宗旨</h3>
+                <p class="mt-6 text-gray-500 max-w-2xl mx-auto text-lg">
+                    因應全球化競爭時代，本系透過精心設計的課程，輔以數位化與國際化之管理整合，期望培育學生具備溝通表達、思維辯證、團隊合作、道德關懷及問題解決能力。
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="glass-panel p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center text-brand-blue text-2xl mb-8 shadow-sm">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">經營管理</h3>
+                    <p class="text-gray-500 leading-relaxed">
+                        培養管理專業人才，使其具備行銷、資訊、財務、人力資源、生產與作業等活動之規劃、組織、領導及控制技能，並引導企業倫理精神。
+                    </p>
+                </div>
+                <!-- Value 2 -->
+                <div class="glass-panel p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-500 relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <!-- 裝飾光暈 -->
+                    <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-300 rounded-2xl flex items-center justify-center text-white text-2xl mb-8 shadow-md">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">創新思維</h3>
+                    <p class="text-gray-500 leading-relaxed">
+                        強調學術理論與實務應用並重，訓練學生面對不同產業領域之管理或創新策略問題時，能全面性評估思考，做出正確決策。
+                    </p>
+                </div>
+                <!-- Value 3 -->
+                <div class="glass-panel p-10 rounded-3xl hover:-translate-y-2 transition-transform duration-500" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-2xl flex items-center justify-center text-yellow-600 text-2xl mb-8 shadow-sm">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">國際視野</h3>
+                    <p class="text-gray-500 leading-relaxed">
+                        配合國際化、資訊化趨勢，加強外語與電腦之應用能力，透過部分專業課程全英授課，強化外語能力，接軌全球市場。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Course Features (字體放大、自訂圖片版) -->
+    <section id="features" class="py-24 relative">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+                
+                <!-- 左側：文字與特色列表 (字體放大) -->
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h2 class="text-base font-bold text-brand-blue tracking-widest uppercase mb-4">Curriculum</h2>
+                    <h3 class="text-4xl lg:text-5xl font-extrabold text-brand-dark mb-8 tracking-tight">五大特色領域課程</h3>
+                    <p class="text-gray-500 mb-12 text-lg lg:text-xl leading-relaxed">
+                        我們提供充足的產業實習機會與跨系學術社群合作，讓學生與產業界實際接觸。課程涵蓋從基礎理論到哈佛商業評論（HBR）實際個案探討，全面提升實戰能力：
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <!-- 特色 1 -->
+                        <div class="flex items-start gap-5 p-2 rounded-2xl hover:bg-white/60 transition-colors">
+                            <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md shrink-0 mt-1">
+                                <i class="fas fa-check text-brand-blue text-lg"></i>
+                            </div>
+                            <div>
+                                <strong class="text-gray-800 block text-xl mb-2">科技管理</strong>
+                                <span class="text-gray-500 text-base lg:text-lg leading-relaxed">基礎科技概念建立與創新管理理論，結合實務案例探討。</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 特色 2 -->
+                        <div class="flex items-start gap-5 p-2 rounded-2xl hover:bg-white/60 transition-colors">
+                            <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md shrink-0 mt-1">
+                                <i class="fas fa-check text-brand-blue text-lg"></i>
+                            </div>
+                            <div>
+                                <strong class="text-gray-800 block text-xl mb-2">新產品開發</strong>
+                                <span class="text-gray-500 text-base lg:text-lg leading-relaxed">融入設計思考，從需求、通路到行銷的創意思維接力。</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 特色 3 -->
+                        <div class="flex items-start gap-5 p-2 rounded-2xl hover:bg-white/60 transition-colors">
+                            <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md shrink-0 mt-1">
+                                <i class="fas fa-check text-brand-blue text-lg"></i>
+                            </div>
+                            <div>
+                                <strong class="text-gray-800 block text-xl mb-2">專案管理</strong>
+                                <span class="text-gray-500 text-base lg:text-lg leading-relaxed">培養組織中專案企劃、排程、績效與成本控管能力。</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 特色 4 -->
+                        <div class="flex items-start gap-5 p-2 rounded-2xl hover:bg-white/60 transition-colors">
+                            <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md shrink-0 mt-1">
+                                <i class="fas fa-check text-brand-blue text-lg"></i>
+                            </div>
+                            <div>
+                                <strong class="text-gray-800 block text-xl mb-2">行銷管理與資訊管理</strong>
+                                <span class="text-gray-500 text-base lg:text-lg leading-relaxed">探討網路時代行銷，理解 IT 應用於企業的方式，強調 MIS 決策。</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：自訂圖片替換區 -->
+                <div class="md:w-1/2 relative" data-aos="fade-left" data-aos-delay="200">
+                    <!-- 圖片背後的柔和光暈 -->
+                    <div class="absolute inset-0 bg-brand-blue rounded-[2.5rem] transform scale-105 opacity-10 filter blur-2xl"></div>
+                    
+                    <!-- 
+                        👉 [圖片替換說明] 
+                        請將您想放的照片命名為 "your_course_image.jpg" 並放在與 index.html 同一個資料夾內。
+                        或者，把下方 src="your_course_image.jpg" 裡面的檔名，改成您準備好的照片檔名即可。
+                    -->
+                    <img src="your_course_image.jpg" alt="特色課程實況" class="relative rounded-[2rem] shadow-2xl object-cover w-full h-auto border-[6px] border-white/60">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+                
+
+    <!-- Agenda Section (柔和時間軸) -->
+    <section id="agenda" class="py-24">
+         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-brand-blue tracking-widest uppercase mb-3">Event Agenda</h2>
+                <h3 class="text-3xl lg:text-4xl font-extrabold text-brand-dark">活動雙引擎：說明會 × 經管講堂</h3>
+            </div>
+
+            <!-- Event 1: Admission Info Session -->
+            <div class="mb-16" data-aos="fade-up">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-12 bg-white rounded-2xl shadow-sm flex items-center justify-center text-brand-blue text-xl"><i class="fas fa-university"></i></div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800">116學年度 碩士在職專班招生說明會</h3>
+                        <p class="text-gray-500 font-medium"><i class="far fa-calendar-alt mr-1"></i> 11/21 (星期六) 10:00 - 12:00 ｜ 📍 國立臺南大學 ZA108 教室</p>
+                    </div>
+                </div>
+                
+                <!-- 無邊框連貫時間軸 -->
+                <div class="pl-6 md:pl-0 space-y-8 relative before:absolute before:inset-0 before:ml-[35px] md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-brand-blue/50 before:to-transparent">
+                    
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center justify-center w-6 h-6 rounded-full bg-brand-blue shadow-[0_0_0_8px_rgba(255,255,255,1)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-3rem)] glass-panel p-6 rounded-2xl">
+                            <time class="text-xs font-bold tracking-widest text-brand-blue block mb-2">09:40 - 10:00</time>
+                            <div class="font-bold text-lg text-gray-800">貴賓報到與交流</div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center justify-center w-6 h-6 rounded-full bg-brand-accent shadow-[0_0_0_8px_rgba(255,255,255,1)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-3rem)] glass-panel p-6 rounded-2xl relative overflow-hidden">
+                            <div class="absolute right-0 bottom-0 text-6xl text-brand-light opacity-30 transform translate-x-4 translate-y-4"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <time class="text-xs font-bold tracking-widest text-brand-accent block mb-2">10:00 - 10:40</time>
+                            <div class="font-bold text-lg text-gray-800 mb-1">系主任宣導與學系藍圖</div>
+                            <div class="text-gray-500 text-sm">由系主任親自剖析經管系教育目標與未來產學發展趨勢。</div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center justify-center w-6 h-6 rounded-full bg-brand-gold shadow-[0_0_0_8px_rgba(255,255,255,1)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-3rem)] glass-panel p-6 rounded-2xl">
+                            <time class="text-xs font-bold tracking-widest text-brand-gold block mb-2">10:40 - 11:20</time>
+                            <div class="font-bold text-lg text-gray-800 mb-1">學長姐課程與實戰分享</div>
+                            <div class="text-gray-500 text-sm">優秀校友現身說法，分享課程收穫與職涯躍升經驗。</div>
+                        </div>
+                    </div>
+
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-400 shadow-[0_0_0_8px_rgba(255,255,255,1)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10"></div>
+                        <div class="w-[calc(100%-3rem)] md:w-[calc(50%-3rem)] glass-panel p-6 rounded-2xl">
+                            <time class="text-xs font-bold tracking-widest text-gray-500 block mb-2">11:20 - 12:00</time>
+                            <div class="font-bold text-lg text-gray-800 mb-1">互動 Q&A 時間</div>
+                            <div class="text-gray-500 text-sm">針對事前提問解答並開放現場交流。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Event 2: Special Keynote (明亮高質感 一體化版) -->
+            <div class="mt-20 relative" data-aos="zoom-in" data-aos-delay="200">
+                <div class="bg-gradient-to-br from-white to-blue-50 rounded-3xl p-1 relative overflow-hidden shadow-[0_20px_50px_rgba(0,86,179,0.08)]">
+                    <!-- 背景裝飾光暈 -->
+                    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-light rounded-full mix-blend-multiply filter blur-[100px] opacity-80 pointer-events-none transform translate-x-1/3 -translate-y-1/3"></div>
+                    
+                    <div class="bg-white/80 backdrop-blur-2xl rounded-[22px] p-8 md:p-12 relative z-10 border border-white">
+                        
+                        <!-- 標籤與時間 -->
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 border-b border-gray-100 pb-6">
+                            <div class="inline-flex items-center gap-3">
+                                <span class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-4 py-1.5 rounded text-sm font-black tracking-widest uppercase shadow-sm">重磅預告</span>
+                                <span class="text-brand-blue font-bold tracking-widest text-sm"><i class="fas fa-crown mr-1 text-yellow-500"></i> VIP 經管講堂</span>
+                            </div>
+                            <span class="text-brand-dark font-semibold flex items-center bg-blue-50 px-4 py-2 rounded-lg border border-blue-100 shadow-inner">
+                                <i class="far fa-calendar-alt text-brand-blue mr-2 text-lg"></i> 
+                                12/12 (星期六) 10:00 @ 專題教室
+                            </span>
+                        </div>
+
+                        <!-- 內容與講者區塊 -->
+                        <div class="flex flex-col lg:flex-row justify-between items-start gap-12">
+                            
+                            <!-- 左側：演講主題與詳細大綱 -->
+                            <div class="lg:w-2/3">
+                                <h3 class="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-6 tracking-tight text-brand-dark">
+                                    以 Agentic AI 驅動的<br>
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-accent drop-shadow-sm mt-2 block">
+                                        高價值客戶生命週期管理與變現
+                                    </span>
+                                </h3>
+                                
+                                <p class="text-gray-600 text-lg md:text-xl font-medium mb-8 leading-relaxed border-l-4 border-brand-blue pl-4">
+                                    當 AI 從「生成內容」走向「自主行動 (Agentic)」，企業該如何掌握這波技術典範轉移，重塑客戶體驗與營收成長引擎？
+                                </p>
+
+                                <!-- 議程亮點 -->
+                                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                                    <h4 class="text-brand-dark font-bold text-lg mb-4 flex items-center gap-2">
+                                        <i class="fas fa-crosshairs text-brand-accent"></i> 核心議程亮點
+                                    </h4>
+                                    <ul class="space-y-4">
+                                        <li class="flex items-start gap-4">
+                                            <div class="mt-1 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 border border-blue-200">
+                                                <i class="fas fa-robot text-xs text-brand-blue"></i>
+                                            </div>
+                                            <div>
+                                                <strong class="text-gray-800 block text-base">從 Copilot 到 Agentic AI</strong>
+                                                <span class="text-gray-500 text-sm mt-1 block leading-relaxed">解析具備「目標導向與自主決策」能力的 AI 代理人，將如何顛覆傳統 CRM 的被動資料管理模式。</span>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start gap-4">
+                                            <div class="mt-1 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 border border-blue-200">
+                                                <i class="fas fa-project-diagram text-xs text-brand-blue"></i>
+                                            </div>
+                                            <div>
+                                                <strong class="text-gray-800 block text-base">高價值客戶旅程重塑</strong>
+                                                <span class="text-gray-500 text-sm mt-1 block leading-relaxed">如何利用 AI 進行精準預測、個人化互動，並在生命週期的關鍵節點提升客戶忠誠度。</span>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-start gap-4">
+                                            <div class="mt-1 w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 border border-blue-200">
+                                                <i class="fas fa-chart-line text-xs text-brand-blue"></i>
+                                            </div>
+                                            <div>
+                                                <strong class="text-gray-800 block text-base">變現實戰與業界洞察</strong>
+                                                <span class="text-gray-500 text-sm mt-1 block leading-relaxed">Salesforce 的第一手產業鏈結經驗分享，剖析成功企業如何將 AI 技術轉化為實質營收成長。</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- 右側：放大的講者介紹 -->
+                            <div class="lg:w-1/3 flex flex-col items-center lg:items-start w-full">
+                                <div class="bg-gradient-to-b from-blue-50/50 to-white p-8 rounded-3xl border border-blue-100 w-full flex flex-col items-center text-center relative overflow-hidden group shadow-sm hover:shadow-md transition-shadow duration-300">
+                                    <!-- 講者背後的光暈特效 -->
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-light rounded-full filter blur-[40px] opacity-80 group-hover:bg-blue-200 transition-colors duration-500"></div>
+                                    
+                                    <!-- 放大的照片區域 -->
+                                    <div class="relative mb-6">
+                                        <div class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center text-5xl border-4 border-white shadow-xl relative z-10 overflow-hidden ring-4 ring-brand-blue/20 group-hover:ring-brand-blue/40 transition-all duration-500">
+                                            <!-- 若有真實照片，將 img 標籤放在這裡，如： <img src="speaker.jpg" class="w-full h-full object-cover"> -->
+                                            <i class="fas fa-user-tie text-gray-300"></i>
+                                        </div>
+                                        <!-- 裝飾用小標籤 -->
+                                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg z-20 whitespace-nowrap">
+                                            Keynote Speaker
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-2 relative z-10 w-full">
+                                        <div class="text-gray-500 font-bold text-sm tracking-widest mb-2 uppercase">特邀講者</div>
+                                        <div class="text-2xl md:text-3xl font-extrabold text-brand-dark tracking-wide mb-2">徐 嘉 聲</div>
+                                        <div class="h-px w-12 bg-gray-200 mx-auto my-3"></div>
+                                        <div class="text-gray-600 font-medium leading-relaxed">
+                                            美商 Salesforce<br>
+                                            臺灣區總經理
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- RSVP Section (一體化懸浮表單) -->
+    <section id="register" class="py-24 relative pb-40">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-dark mb-4">開啟您的變革之旅</h2>
+                <p class="text-gray-500">填寫表單預約席位，參與南大經管專班招生活動。</p>
+            </div>
+
+            <!-- 將表單設計為整塊大懸浮卡片 -->
+            <div class="bg-white/80 backdrop-blur-xl rounded-[2.5rem] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,86,179,0.1)] border border-white relative">
+                
+                <!-- 裝飾用彩色光影 -->
+                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-blue via-brand-accent to-brand-gold"></div>
+
+                <!-- Success Message Overlay -->
+                <div id="success-message" class="hidden absolute inset-0 bg-white/95 backdrop-blur-md z-20 flex flex-col items-center justify-center p-8 text-center transition-all duration-500">
+                    <div class="w-20 h-20 bg-green-50 text-green-500 rounded-full flex items-center justify-center text-4xl mb-6 shadow-inner shrink-0">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h4 class="text-3xl font-extrabold text-gray-800 mb-3">報名成功！</h4>
+                    <p class="text-gray-500 mb-8 max-w-md">我們已收到您的資料，請將活動加入您的行事曆，期待您的蒞臨。</p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md mb-8">
+                        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=國立臺南大學經營與管理學系+招生說明會&dates=20261121T020000Z/20261121T040000Z&details=期待您參與招生說明會！&location=國立臺南大學+ZA108教室" target="_blank" class="flex-1 flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 font-bold py-3 px-4 rounded-xl hover:bg-gray-50 transition-all shadow-sm hover:shadow-md">
+                            <i class="fab fa-google text-red-500"></i> Google
+                        </a>
+                        <button onclick="downloadICS()" class="flex-1 flex items-center justify-center gap-2 bg-gray-900 text-white font-bold py-3 px-4 rounded-xl hover:bg-black transition-all shadow-sm hover:shadow-md">
+                            <i class="fab fa-apple text-white"></i> Apple
+                        </button>
+                    </div>
+
+                    <button onclick="resetForm()" class="text-gray-400 hover:text-brand-blue transition-colors text-sm font-medium">
+                        <i class="fas fa-undo mr-1"></i> 填寫另一筆報名
+                    </button>
+                </div>
+
+                <div class="p-10 md:p-14">
+                    <form id="rsvp-form" onsubmit="submitForm(event)" class="space-y-8">
+                        <div class="space-y-4">
+                            <label class="block text-sm font-bold text-gray-800 tracking-wide">選擇報名場次 (可複選) <span class="text-red-500">*</span></label>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <label class="flex items-start p-4 border-2 border-transparent bg-gray-50 rounded-2xl cursor-pointer hover:bg-blue-50/50 transition-colors [&:has(:checked)]:border-brand-blue [&:has(:checked)]:bg-blue-50">
+                                    <input type="checkbox" name="session" value="11/21 招生說明會" class="mt-1 w-5 h-5 text-brand-blue rounded border-gray-300 focus:ring-brand-blue" checked>
+                                    <div class="ml-4">
+                                        <span class="block text-base font-bold text-gray-800">11/21 招生說明會</span>
+                                        <span class="block text-sm text-gray-500 mt-1">10:00 - 12:00 @ ZA108</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-start p-4 border-2 border-transparent bg-gray-50 rounded-2xl cursor-pointer hover:bg-blue-50/50 transition-colors [&:has(:checked)]:border-brand-blue [&:has(:checked)]:bg-blue-50">
+                                    <input type="checkbox" name="session" value="12/12 經管講堂" class="mt-1 w-5 h-5 text-brand-blue rounded border-gray-300 focus:ring-brand-blue">
+                                    <div class="ml-4">
+                                        <span class="block text-base font-bold text-gray-800">12/12 經管講堂</span>
+                                        <span class="block text-sm text-gray-500 mt-1">Salesforce 總經理演講</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label class="block text-sm font-bold text-gray-800">姓名 <span class="text-red-500">*</span></label>
+                                <input type="text" name="name" required class="w-full px-5 py-3 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-brand-blue outline-none transition-all placeholder-gray-400">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-sm font-bold text-gray-800">現職產業/公司</label>
+                                <input type="text" name="job" class="w-full px-5 py-3 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-brand-blue outline-none transition-all placeholder-gray-400">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-800">電子信箱 <span class="text-red-500">*</span></label>
+                            <input type="email" name="email" required class="w-full px-5 py-3 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-brand-blue outline-none transition-all placeholder-gray-400">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-800">事前提問</label>
+                            <textarea name="question" rows="3" class="w-full px-5 py-3 bg-gray-50 border-none rounded-xl focus:ring-2 focus:ring-brand-blue outline-none transition-all resize-none placeholder-gray-400" placeholder="將於說明會QA環節為您解答..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full bg-brand-blue text-white text-lg font-bold py-4 rounded-xl hover:bg-brand-accent hover:shadow-[0_10px_20px_rgba(0,168,255,0.3)] transition-all transform hover:-translate-y-1 mt-4">
+                            確認送出報名
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (自然融入背景) -->
+    <footer class="bg-transparent text-gray-500 py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-200/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4 opacity-70">
+                <img src="image_14a2bb.jpg" alt="NUTN BM Logo" class="h-8 grayscale opacity-70 logo-blend">
+                <div>
+                    <div class="font-bold text-gray-600 text-sm">國立臺南大學 經營與管理學系</div>
+                    <div class="text-xs mt-0.5">Department of Business and Management, NUTN</div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col items-center md:items-end gap-3">
+                <div class="text-xs text-center md:text-right">
+                    <p>聯絡電話：(06)2606123 轉 7731</p>
+                    <p class="mt-1">學系網址：<a href="https://bm.nutn.edu.tw/" target="_blank" class="hover:text-brand-blue transition">bm.nutn.edu.tw</a></p>
+                </div>
+                <a href="#" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white px-4 py-1.5 rounded-full text-xs font-medium hover:opacity-90 transition-opacity shadow-sm">
+                    <i class="fab fa-instagram"></i> 追蹤最新動態
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入 AOS 動畫函式庫 JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // 初始化 AOS 動畫 (往下捲才會觸發)
+        AOS.init({
+            duration: 800,   // 動畫長度
+            once: true,      // 每個元素只動畫一次
+            offset: 100,     // 提早 100px 觸發
+        });
+
+        // Navbar 滾動監聽：讓最上方的 Navbar 原本透明文字白色，往下滑後背景變白字變色
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const navText = document.getElementById('nav-text');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navBtn = document.querySelector('.nav-btn');
+            
+            if (window.scrollY > 50) {
+                // 網頁向下滑動時 (變白底)
+                navbar.classList.add('nav-scrolled');
+                navbar.classList.remove('py-2');
+                
+                navText.classList.replace('text-white', 'text-brand-blue');
+                navText.classList.replace('border-white/50', 'border-brand-blue/30');
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-gray-600');
+                });
+                
+                navBtn.classList.replace('bg-white/20', 'bg-brand-blue');
+                navBtn.classList.replace('border-white/30', 'border-transparent');
+                navBtn.classList.add('text-white');
+            } else {
+                // 網頁在最上方時 (保持透明，白字)
+                navbar.classList.remove('nav-scrolled');
+                navbar.classList.add('py-2');
+                
+                navText.classList.add('text-white');
+                navText.classList.remove('text-brand-blue');
+                navText.classList.replace('border-brand-blue/30', 'border-white/50');
+                
+                navLinks.forEach(link => {
+                    link.classList.add('text-white');
+                    link.classList.remove('text-gray-600');
+                });
+                
+                navBtn.classList.replace('bg-brand-blue', 'bg-white/20');
+                navBtn.classList.replace('border-transparent', 'border-white/30');
+                navBtn.classList.remove('text-white');
+            }
+        });
+        
+        // 觸發一次 scroll 事件初始化 Navbar 狀態
+        window.dispatchEvent(new Event('scroll'));
+
+        // ==========================
+        // 以下為表單送出與行事曆功能
+        // ==========================
+        const GAS_URL = "您的_GAS_網址放這裡"; 
+
+        async function submitForm(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('rsvp-form');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 資料傳送中...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get('name'),
+                job: formData.get('job'),
+                email: formData.get('email'),
+                question: formData.get('question'),
+                session: formData.getAll('session').join(' , ') 
+            };
+
+            if(GAS_URL === "您的_GAS_網址放這裡" || GAS_URL === "") {
+                setTimeout(() => {
+                    document.getElementById('success-message').classList.remove('hidden');
+                    // 添加一個小動畫類別讓它優雅淡入
+                    document.getElementById('success-message').classList.add('animate-pulse');
+                    setTimeout(()=> document.getElementById('success-message').classList.remove('animate-pulse'), 500);
+                    resetBtnState();
+                }, 1000);
+                return;
+            }
+
+            try {
+                const response = await fetch(GAS_URL, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' }
+                });
+
+                if (response.ok) {
+                    document.getElementById('success-message').classList.remove('hidden');
+                } else {
+                    throw new Error('Network error');
+                }
+            } catch (error) {
+                alert("傳送資料時發生錯誤，請稍後再試。");
+            } finally {
+                resetBtnState();
+            }
+        }
+
+        function resetBtnState() {
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.innerHTML = '確認送出報名';
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+        }
+
+        function resetForm() {
+            document.getElementById('success-message').classList.add('hidden');
+            document.getElementById('rsvp-form').reset();
+        }
+
+        function downloadICS() {
+            const icsData = 
+`BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NUTN BM EMBA//Event//ZH-TW
+BEGIN:VEVENT
+UID:nutn-bm-emba-2027@nutn.edu.tw
+DTSTAMP:20261017T095400Z
+DTSTART:20261121T020000Z
+DTEND:20261121T040000Z
+SUMMARY:國立臺南大學經營與管理學系 招生說明會
+LOCATION:國立臺南大學 ZA108 教室
+DESCRIPTION:期待您參與 116 學年度碩士在職專班招生說明會。
+END:VEVENT
+END:VCALENDAR`;
+            const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = window.URL.createObjectURL(blob);
+            link.download = 'NUTN_EMBA_InfoSession.ics';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
