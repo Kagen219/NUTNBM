@@ -78,7 +78,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center gap-3">
-                    <img src="image2.png" alt="NUTN BM Logo" class="h-12 logo-blend bg-white/50 rounded-lg p-1">
+                    <img src="image1.jpg" alt="NUTN BM Logo" class="h-12 logo-blend bg-white/50 rounded-lg p-1">
                     <div class="hidden sm:block border-l-2 border-white/50 pl-3 transition-colors duration-300" id="nav-text">
                         <div class="font-bold text-lg leading-tight tracking-wide drop-shadow-sm">國立臺南大學</div>
                         <div class="text-xs opacity-90 drop-shadow-sm">經營與管理學系 碩士在職專班</div>
@@ -383,16 +383,19 @@
                                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-light rounded-full filter blur-[40px] opacity-80 group-hover:bg-blue-200 transition-colors duration-500"></div>
                                     
                                     <!-- 放大的照片區域 -->
-                                    <div class="relative mb-6">
-                                        <div class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center text-5xl border-4 border-white shadow-xl relative z-10 overflow-hidden ring-4 ring-brand-blue/20 group-hover:ring-brand-blue/40 transition-all duration-500">
-                                            <!-- 若有真實照片，將 img 標籤放在這裡，如： <img src="speaker.jpg" class="w-full h-full object-cover"> -->
-                                            <i class="fas fa-user-tie text-gray-300"></i>
-                                        </div>
-                                        <!-- 裝飾用小標籤 -->
-                                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg z-20 whitespace-nowrap">
-                                            Keynote Speaker
-                                        </div>
-                                    </div>
+<div class="relative mb-6">
+    <div class="w-32 h-32 md:w-40 md:h-40 bg-white rounded-full flex items-center justify-center text-5xl border-4 border-white shadow-xl relative z-10 overflow-hidden ring-4 ring-brand-blue/20 group-hover:ring-brand-blue/40 transition-all duration-500">
+        
+        <!-- 將原本的 <i> 標籤刪除，換成下面這行 img 標籤 -->
+        <img src="image2.jpg" alt="徐嘉聲總經理" class="w-full h-full object-cover">
+        
+    </div>
+    
+    <!-- 裝飾用小標籤 -->
+    <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg z-20 whitespace-nowrap">
+        Keynote Speaker
+    </div>
+</div>
 
                                     <div class="mt-2 relative z-10 w-full">
                                         <div class="text-gray-500 font-bold text-sm tracking-widest mb-2 uppercase">特邀講者</div>
