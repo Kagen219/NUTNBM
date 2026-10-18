@@ -166,20 +166,21 @@
             </div>
         </div>
     </section>
-<!-- Course Features (字體放大、自訂圖片版) -->
+<!-- Course Features (完整修正版：確保左右排版正確) -->
     <section id="features" class="py-24 relative">
          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-             <div class="flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+             <!-- 這裡的 flex-row 確保在大螢幕會左右並排 -->
+             <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                 
-                <!-- 左側：文字與特色列表 (字體放大) -->
-                <div class="md:w-1/2" data-aos="fade-right">
+                <!-- 左側：文字與特色列表 -->
+                <div class="lg:w-1/2 w-full" data-aos="fade-right">
                     <h2 class="text-base font-bold text-brand-blue tracking-widest uppercase mb-4">Curriculum</h2>
                     <h3 class="text-4xl lg:text-5xl font-extrabold text-brand-dark mb-8 tracking-tight">五大特色領域課程</h3>
                     <p class="text-gray-500 mb-12 text-lg lg:text-xl leading-relaxed">
                         我們提供充足的產業實習機會與跨系學術社群合作，讓學生與產業界實際接觸。課程涵蓋從基礎理論到哈佛商業評論（HBR）實際個案探討，全面提升實戰能力：
                     </p>
                     
-                   <div class="space-y-6">
+                    <div class="space-y-6">
                         <!-- 特色 1 -->
                         <div class="flex items-start gap-5 p-2 rounded-2xl hover:bg-white/60 transition-colors">
                             <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md shrink-0 mt-1">
@@ -213,7 +214,7 @@
                             </div>
                         </div>
                         
-                        <!-- 特色 4 (拆分出來的行銷管理) -->
+                        <!-- 特色 4 -->
                         <div class="flex items-start gap-5 p-2 rounded-2xl hover:bg-white/60 transition-colors">
                             <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md shrink-0 mt-1">
                                 <i class="fas fa-check text-brand-blue text-lg"></i>
@@ -224,7 +225,7 @@
                             </div>
                         </div>
 
-                        <!-- 特色 5 (拆分出來的資訊管理) -->
+                        <!-- 特色 5 -->
                         <div class="flex items-start gap-5 p-2 rounded-2xl hover:bg-white/60 transition-colors">
                             <div class="bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md shrink-0 mt-1">
                                 <i class="fas fa-check text-brand-blue text-lg"></i>
@@ -235,15 +236,17 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- 左側結束 -->
 
-                <!-- 右側：自訂圖片替換區 -->
-<div class="md:w-1/2 relative" data-aos="fade-left" data-aos-delay="200">
-    <!-- 圖片背後的柔和光暈 -->
-    <div class="absolute inset-0 bg-brand-blue rounded-[2.5rem] transform scale-105 opacity-10 filter blur-2xl"></div>
-    
-    <!-- 將這裡的 src 換成 image3.jpg -->
-    <img src="image3.jpg" alt="特色課程實況" class="relative rounded-[2rem] shadow-2xl object-cover w-full h-auto border-[6px] border-white/60">
-</div>
+                <!-- 右側：圖片區塊 (會自動佔據另外一半的空間) -->
+                <div class="lg:w-1/2 w-full relative" data-aos="fade-left" data-aos-delay="200">
+                    <!-- 圖片背後的柔和光暈 -->
+                    <div class="absolute inset-0 bg-brand-blue rounded-[2.5rem] transform scale-105 opacity-10 filter blur-2xl"></div>
+                    
+                    <img src="image3.jpg" alt="特色課程實況" class="relative rounded-[2rem] shadow-2xl object-cover w-full h-auto border-[6px] border-white/60">
+                </div>
+                <!-- 右側結束 -->
                 
             </div>
         </div>
