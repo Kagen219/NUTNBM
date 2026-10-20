@@ -555,16 +555,17 @@
     </footer>
 
     <!-- 引入 AOS 動畫函式庫 JS -->
+   <!-- 引入 AOS 動畫函式庫 JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // 初始化 AOS 動畫 (往下捲才會觸發)
+        // 初始化 AOS 動畫
         AOS.init({
-            duration: 800,   // 動畫長度
-            once: true,      // 每個元素只動畫一次
-            offset: 100,     // 提早 100px 觸發
+            duration: 800,
+            once: true,
+            offset: 100,
         });
 
-        // Navbar 滾動監聽：讓最上方的 Navbar 原本透明文字白色，往下滑後背景變白字變色
+        // Navbar 滾動監聽
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             const navText = document.getElementById('nav-text');
@@ -572,54 +573,64 @@
             const navBtn = document.querySelector('.nav-btn');
             
             if (window.scrollY > 50) {
-                // 網頁向下滑動時 (變白底)
                 navbar.classList.add('nav-scrolled');
                 navbar.classList.remove('py-2');
                 
-                navText.classList.replace('text-white', 'text-brand-blue');
-                navText.classList.replace('border-white/50', 'border-brand-blue/30');
+                if (navText) {
+                    navText.classList.replace('text-white', 'text-brand-blue');
+                    navText.classList.replace('border-white/50', 'border-brand-blue/30');
+                }
                 
                 navLinks.forEach(link => {
                     link.classList.remove('text-white');
                     link.classList.add('text-gray-600');
                 });
                 
-                navBtn.classList.replace('bg-white/20', 'bg-brand-blue');
-                navBtn.classList.replace('border-white/30', 'border-transparent');
-                navBtn.classList.add('text-white');
+                if (navBtn) {
+                    navBtn.classList.replace('bg-white/20', 'bg-brand-blue');
+                    navBtn.classList.replace('border-white/30', 'border-transparent');
+                    navBtn.classList.add('text-white');
+                }
             } else {
-                // 網頁在最上方時 (保持透明，白字)
                 navbar.classList.remove('nav-scrolled');
                 navbar.classList.add('py-2');
                 
-                navText.classList.add('text-white');
-                navText.classList.remove('text-brand-blue');
-                navText.classList.replace('border-brand-blue/30', 'border-white/50');
+                if (navText) {
+                    navText.classList.add('text-white');
+                    navText.classList.remove('text-brand-blue');
+                    navText.classList.replace('border-brand-blue/30', 'border-white/50');
+                }
                 
                 navLinks.forEach(link => {
                     link.classList.add('text-white');
                     link.classList.remove('text-gray-600');
                 });
                 
-                navBtn.classList.replace('bg-brand-blue', 'bg-white/20');
-                navBtn.classList.replace('border-transparent', 'border-white/30');
-                navBtn.classList.remove('text-white');
+                if (navBtn) {
+                    navBtn.classList.replace('bg-brand-blue', 'bg-white/20');
+                    navBtn.classList.replace('border-transparent', 'border-white/30');
+                    navBtn.classList.remove('text-white');
+                }
             }
         });
         
-        // 觸發一次 scroll 事件初始化 Navbar 狀態
         window.dispatchEvent(new Event('scroll'));
 
         // ==========================
-        // 以下為表單送出與行事曆功能
+        // 表單送出與行事曆功能
         // ==========================
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbwt5fM-1fXUZlT280jY7HFRf4tmkV4cV3tgUGlSfTQUYppfhSOhvKfXi0Mys7lfRNj9HA/exec"; // Google Apps Script 網址
+        
+        // 🌟 請確認這串網址是您自己部署的 GAS 網址
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbwt5fM-1fXUZlT280jY7HFRf4tmkV4cV3tgUGlSfTQUYppfhSOhvKfXi0Mys7lfRNj9HA/exec"; 
+
         async function submitForm(event) {
+            // 阻止表單預設的重整網頁行為
             event.preventDefault();
             
             const form = document.getElementById('rsvp-form');
             const submitBtn = document.getElementById('submit-btn');
             
+            // 按鈕狀態變更為載入中
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 資料傳送中...';
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
@@ -629,49 +640,51 @@
                 name: formData.get('name'),
                 job: formData.get('job'),
                 email: formData.get('email'),
+                meal: formData.get('meal'), // 取得餐點需求
                 question: formData.get('question'),
                 session: formData.getAll('session').join(' , ') 
             };
 
-            if(GAS_URL === "您的_GAS_網址放這裡" || GAS_URL === "") {
-                setTimeout(() => {
-                    document.getElementById('success-message').classList.remove('hidden');
-                    // 添加一個小動畫類別讓它優雅淡入
-                    document.getElementById('success-message').classList.add('animate-pulse');
-                    setTimeout(()=> document.getElementById('success-message').classList.remove('animate-pulse'), 500);
-                    resetBtnState();
-                }, 1000);
-                return;
-            }
-
             try {
-                const response = await fetch(GAS_URL, {
+                // 發送給 Google Apps Script，使用 no-cors 避免跨域阻擋
+                await fetch(GAS_URL, {
                     method: 'POST',
+                    mode: 'no-cors',
                     body: JSON.stringify(data),
                     headers: { 'Content-Type': 'text/plain;charset=utf-8' }
                 });
 
-                if (response.ok) {
-                    document.getElementById('success-message').classList.remove('hidden');
-                } else {
-                    throw new Error('Network error');
-                }
+                // 因為 no-cors 無法讀取回傳值，只要沒報錯就當作成功，顯示成功畫面
+                document.getElementById('success-message').classList.remove('hidden');
+                
+                // 動畫效果
+                document.getElementById('success-message').classList.add('animate-pulse');
+                setTimeout(() => {
+                    document.getElementById('success-message').classList.remove('animate-pulse');
+                }, 500);
+
             } catch (error) {
-                alert("傳送資料時發生錯誤，請稍後再試。");
+                console.error("表單送出錯誤:", error);
+                alert("傳送資料時發生錯誤，請檢查網路連線。");
             } finally {
+                // 恢復按鈕原本的狀態
                 resetBtnState();
             }
         }
 
         function resetBtnState() {
             const submitBtn = document.getElementById('submit-btn');
-            submitBtn.innerHTML = '確認送出報名';
-            submitBtn.disabled = false;
-            submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            if (submitBtn) {
+                submitBtn.innerHTML = '確認送出報名';
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            }
         }
 
         function resetForm() {
+            // 隱藏成功畫面
             document.getElementById('success-message').classList.add('hidden');
+            // 清空表單內容
             document.getElementById('rsvp-form').reset();
         }
 
